@@ -1,0 +1,22 @@
+.magpleasure-treeview-tree {
+    float:left;
+    width: 220px;
+    margin-right: -220px;
+
+}
+
+.magpleasure-treeview-form {
+    margin-left: 220px;
+    min-height: 450px;
+    padding: 0 0 25px 25px;
+}
+
+.tree-view .tree {
+    width:100%;
+    overflow:auto;
+}
+
+div.fixed {
+    clear: both;
+}
+

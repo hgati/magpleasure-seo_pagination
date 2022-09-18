@@ -1,0 +1,72 @@
+<?php
+/**
+ * MagPleasure Ltd.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE-CE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magpleasure.com/LICENSE-CE.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package designed for Magento COMMUNITY edition
+ * MagPleasure does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * Magpleasure does not provide extension support in case of
+ * incorrect edition usage.
+ * =================================================================
+ *
+ * @category   MagPleasure
+ * @package    Magpleasure_Common
+ * @version    0.8.0
+ * @copyright  Copyright (c) 2012-2014 MagPleasure Ltd. (http://www.magpleasure.com)
+ * @license    http://www.magpleasure.com/LICENSE-CE.txt
+ */
+?>
+<?php /** @var $this Magpleasure_Common_Block_Adminhtml_Widget_Treeview_Tree */ ?>
+<script type="text/javascript">
+    //<![CDATA[
+    angular
+        .module('magpleasure.treeview.<?php echo $this->getHtmlId(); ?>', [])
+        .factory('config', function () {
+            return <?php echo $this->getConfigJson(); ?>;
+        })
+        .factory('tree', function () {
+            return <?php echo $this->getRootItemsJson(); ?>;
+        })
+        .directive('mpTreeLeaf', function(){
+            return {
+                restrict: 'E',
+                replace: true,
+                template: '<?php echo $this->getTreeLeafTemplate(); ?>',
+                controller: 'TreeLeafController',
+                scope: {
+                    leaf: '&'
+                }
+            };
+        })
+    ;
+
+    //]]>
+</script>
+
+
+<div class="tree-holder" id="<?php echo $this->getHtmlId(); ?>_treeview_container">
+    <div class="tree" ng-controller="TreeViewController">
+        <mp-tree-leaf ng-repeat="leaf in tree" leaf="leaf"></mp-tree-leaf>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    angular.element(document).ready(function () {
+        var doc = document.getElementById('<?php echo $this->getHtmlId(); ?>_treeview_container');
+        if (doc && !$(doc).hasClassName('ng-scope')) {
+            angular.bootstrap(doc, ['magpleasure.treeview.<?php echo $this->getHtmlId(); ?>']);
+        }
+    });
+    //]]>
+</script>

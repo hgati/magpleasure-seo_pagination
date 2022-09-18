@@ -1,0 +1,14 @@
+{
+	"name": "hgati/seo_pagination",
+	"type": "magento-module",
+	"description": "SEO paging for magento",
+	"keywords": ["seo pagination magento"],
+	"homepage": "https://github.com/hgati/seo_pagination",
+	"license": "MIT",
+	"authors": [{ "name": "Dennis Lee", "email": "cobays@gmail.com", "homepage": "https://github.com/hgati", "role": "Magento 1.x Developer" }],
+  
+	"require": {
+	  "php": ">=7.2.0",
+	  "magento-hackathon/magento-composer-installer": "*"
+	}
+  }
