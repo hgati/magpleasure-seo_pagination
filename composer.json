@@ -1,9 +1,9 @@
 {
-	"name": "hgati/seo_pagination",
+	"name": "hgati/magpleasure-seo_pagination",
 	"type": "magento-module",
 	"description": "SEO paging for magento",
 	"keywords": ["seo pagination magento"],
-	"homepage": "https://github.com/hgati/seo_pagination",
+	"homepage": "https://github.com/hgati/magpleasure-seo_pagination",
 	"license": "MIT",
 	"authors": [{ "name": "Dennis Lee", "email": "cobays@gmail.com", "homepage": "https://github.com/hgati", "role": "Magento 1.x Developer" }],
   
