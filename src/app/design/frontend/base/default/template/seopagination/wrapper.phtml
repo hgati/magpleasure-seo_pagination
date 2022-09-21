@@ -30,9 +30,9 @@
 ?>
 <?php if ($this->canShow()): ?>
     <?php if ($this->getNextUrl()): ?>
-        <link rel="next" href="<?php echo $this->getNextUrl(); ?>" />
+        <link rel="next" href="<?php echo $this->getNextUrl()[0]; ?>" />
     <?php endif; ?>
     <?php if ($this->getPreviousUrl()): ?>
-        <link rel="prev" href="<?php echo $this->getPreviousUrl(); ?>" />
+        <link rel="prev" href="<?php echo $this->getPreviousUrl()[0]; ?>" />
     <?php endif; ?>
 <?php endif; ?>
