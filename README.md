@@ -1,2 +1,2 @@
 # seo_pagination
-페이징 SEO
+- 페이징 SEO
