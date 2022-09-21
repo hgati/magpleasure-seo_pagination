@@ -4,6 +4,9 @@
         <Magpleasure_Seopagination>
             <active>true</active>
             <codePool>local</codePool>
-        <edition>CE</edition></Magpleasure_Seopagination>
+            <depends>
+                <Magpleasure_Common/>
+            </depends>
+        </Magpleasure_Seopagination>
     </modules>
 </config>
